@@ -36,7 +36,7 @@ if( $inbound === TRUE || $outbound === TRUE )
 	}
 elseif($logfile)
 	{
-	echo "<div id='download_link' style='link:#00FF00;font-size:18px;display:table-cell;position:fixed;width:100%px;height:24px;vertical-align:middle;background:#000000;top:5px;left:5px;border:2px solid #FFFFFF;'>Download Capture: $uuid.pcap<a href=http://173.255.253.86:81/$uuid.pcap><img src=whitedown.png /></a>\n";
+	echo "<div id='download_link' style='padding:3px;link:#00FF00;font-size:18px;display:block;position:absolute;width:100%px;height:21px;background:#000000;top:5px;left:5px;'> Download Capture: $uuid.pcap<a href=http://173.255.253.86:81/$uuid.pcap><img src=whitedown.png vspace=3 height=20px/></a>\n";
 	echo " \n";
 	echo "</div>\n";
 	echo "<div id='log_output' style='font-size:10px;'>\n";

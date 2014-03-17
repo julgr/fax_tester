@@ -1,0 +1,15 @@
+#!/bin/bash
+
+CMD="tcpdump -s 3000 -i eth0 -W 10 -C 50 -w /var/tmp/traces/historical-trace.pcap port 5060 or port 5080 or port 5160 or portrange 16384-32768"
+
+#ps aux | grep '$CMD'
+#GREPRESULT=$(ps aux | grep '$CMD')
+#echo "grepresults: $GREPRESULTS"
+#if [ -z "$GREPRESULT" ]; then
+#	echo "inside test"
+#	eval $cmd &
+#fi
+
+if [[ ! `pidof -s tcpdump` ]]; then
+  eval $CMD &
+fi
